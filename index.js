@@ -10,7 +10,7 @@ window.onload = function() { //event hooking being used to prevent style == null
         const random_colors = ['#79E359', '#E69D68', '#4DBCD5', '#2C76D6', '#CC6012', '#AD0000', '#FFE4B7', '#8975FF'];
         const monochrome_colors_b = ['#A0D2E7', '#81B1D5', '#3D60A7', '#26408B'];
         const monochrome_colors_p = ['#FFB6D5', '#FF99CC', '#F47DBB', '#D94496'];
-        const random_images = ['images/bg-1.jpg'];
+        const random_images = ['images/bg-1.png','images/bg-2.png','images/bg-3.png','images/bg-4.png', 'images/bg-5.png', 'images/bg-6.png','images/bg-7.png','images/bg-8.png' ];
         var count = 0;
 
         body.style.backgroundColor = '#eee';
@@ -31,6 +31,8 @@ window.onload = function() { //event hooking being used to prevent style == null
         function chooseRandomImage() {
             const imageIndex= parseInt(Math.random()*random_images.length);
             body.style.backgroundImage = "url(" + random_images[imageIndex] + ")";
+            body.style.backgroundRepeat = "repeat";
+            body.style.backgroundSize = "auto";
             console.log("Array length: " + random_images.length);
             console.log("Index number chosen: " + imageIndex);
         }
