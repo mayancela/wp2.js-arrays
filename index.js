@@ -5,6 +5,7 @@ window.onload = function() { //event hooking being used to prevent style == null
         const monochrome_button_b = document.getElementById('monochromatic-b');
         const monochrome_button_p = document.getElementById('monochromatic-p');
         const bg_image_button = document.getElementById('bg-image');
+        const bg_image_remove_button = document.getElementById('bg-image-remove');
         const body = document.querySelector('body');
         const random_colors = ['#79E359', '#E69D68', '#4DBCD5', '#2C76D6', '#CC6012', '#AD0000', '#FFE4B7', '#8975FF'];
         const monochrome_colors_b = ['#A0D2E7', '#81B1D5', '#3D60A7', '#26408B'];
@@ -18,6 +19,7 @@ window.onload = function() { //event hooking being used to prevent style == null
         monochrome_button_b.addEventListener('click', chooseBlueMonochromaticColor);
         monochrome_button_p.addEventListener('click', choosePinkMonochromaticColor);
         bg_image_button.addEventListener('click', chooseRandomImage);
+        bg_image_remove_button.addEventListener('click', removeBgImage);
 
 
         function chooseRandomColor() {
@@ -31,6 +33,10 @@ window.onload = function() { //event hooking being used to prevent style == null
             body.style.backgroundImage = "url(" + random_images[imageIndex] + ")";
             console.log("Array length: " + random_images.length);
             console.log("Index number chosen: " + imageIndex);
+        }
+
+        function removeBgImage() {
+            body.style.backgroundImage = "none";
         }
 
         function chooseBlueMonochromaticColor() {
